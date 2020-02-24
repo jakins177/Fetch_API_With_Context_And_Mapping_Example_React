@@ -1,5 +1,33 @@
+html{
+  background-color: #282c34;
+}
+
+a {
+  color: lightblue;
+}
+
+button{
+  display: inline;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #FFFFFF;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  color: #FFFFFF;
+  background-color: #282c34;
+  font-size: 25px;
+
+}
+
+
+
+  
+
+
 .App {
   text-align: center;
+  background-color: #282c34;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
 .App-logo {
