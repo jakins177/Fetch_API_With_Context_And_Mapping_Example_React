@@ -8,13 +8,19 @@ export default function Employee() {
             
              <UserConsumer>
             {
-                (randomEmployee) => {
+                (data) => {
                     return <div>
                         
-                        <h2>Hello {randomEmployee.employee_name} </h2>
-                        <h2>Your salary {randomEmployee.employee_salary}</h2>
-                        <h2>Your age { randomEmployee.employee_age}</h2>
-                    
+                        {
+            data.map(same => {
+          return <div > 
+            <h2>{same.employee_name}</h2>
+            <h2>{same.employee_salary}</h2>
+            <h2>{same.employee_age}</h2>  
+                <br/>
+           </div>
+        })
+      }            
                     </div>
                 }
             }

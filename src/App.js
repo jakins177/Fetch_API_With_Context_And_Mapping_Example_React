@@ -21,26 +21,23 @@ export default class App extends Component {
     super(props);
     this.state = {
       data: {},
-      randomEmployee: {}
+      employeeData: []
     };
 
     this.consoleTest = this.consoleTest.bind(this);
   }
 
-  setRandomEmployee() {
+  setEmployeeData() {
     let dataArray = this.state.data.data;
 
-    let randomRange = Math.floor(Math.random() * dataArray.length);
-
-    let randomEmployee = dataArray[randomRange];
 
     this.setState({
-      randomEmployee: randomEmployee
+      employeeData: dataArray
     })
 
 
 
-    console.log(this.state.randomEmployee);
+    console.log(this.state.employeeData);
 
   }
 
@@ -67,17 +64,19 @@ export default class App extends Component {
       })
       .then((data) => {
         console.log(data);
+              
         this.setState({
           data: data
         })
-        this.setRandomEmployee();
+        this.setEmployeeData();
       })
   }
 
   render() {
+    console.log(this.state.employeeData)
     return(
       <div className="App">
-        <UserProvider value = {this.state.randomEmployee}>
+        <UserProvider value = {this.state.employeeData}>
           <Router>
             <nav>
             
@@ -108,7 +107,7 @@ export default class App extends Component {
   function Home() {
     return (<div>
      <h2>Home</h2>
-     <h3>Click the dashboard to view your stats.</h3>
+     <h3>Click the dashboard to view all employee stats.</h3>
       </div>);
   }
 

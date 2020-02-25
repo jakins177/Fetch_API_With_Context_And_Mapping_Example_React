@@ -15,9 +15,9 @@ export default function Dashboard() {
                 <Employee />
 
             </div>
-             <div>
+             {/* <div>
                 <button onClick={loadAgain}>New Random Employee</button>
-            </div>
+            </div> */}
         </div>
 
     )
